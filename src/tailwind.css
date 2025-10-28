@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component utilities to replicate previous layout */
+@layer components {
+  .container-max {
+    @apply mx-auto px-4;
+    max-width: 1440px;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow p-4;
+  }
+  .hero-wave {
+    @apply relative overflow-hidden rounded-xl bg-white p-8;
+  }
+  .btn-primary { @apply inline-flex items-center gap-2 bg-blue-600 text-white py-2 px-4 rounded-md; }
+  .btn-secondary { @apply inline-flex items-center gap-2 border border-blue-100 text-blue-600 py-2 px-4 rounded-md; }
+  .input-default { @apply w-full border rounded-md p-2; }
+  .status-open { @apply bg-green-50 text-green-700 px-3 py-1 rounded-full font-semibold; }
+  .status-in_progress { @apply bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-semibold; }
+  .status-closed { @apply bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-semibold; }
+}
+
+/* Base dark theme background and font smoothing */
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-slate-900 text-slate-100 antialiased; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+}
